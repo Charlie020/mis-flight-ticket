@@ -40,16 +40,18 @@ CREATE TABLE Flights (
 
 #### 文件逻辑结构
 
-`main.html`
-    ├─`managelogin.html` 
-    │              ├─` managelogin.php` 
-    │              └─`manage.php`
-    │                       ├─`insert.php`
-    │                       ├─`delete.php`
-    │                       ├─`update.php`
-    │                       └─`selectres.php`
-    └─`select.php` 
-                     └─`selectres.php`
+```
+main.html
+    ├─managelogin.html
+    │              ├─managelogin.php
+    │              └─manage.php
+    │                       ├─insert.php
+    │                       ├─delete.php
+    │                       ├─update.php
+    │                       └─selectres.php
+    └─select.php 
+                     └─selectres.php
+```
 
 1、`main.html`为系统的主界面。
 
