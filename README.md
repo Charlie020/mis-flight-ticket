@@ -38,7 +38,7 @@ CREATE TABLE Flights (
 );
 ```
 
-#### 文件逻辑结构
+#### 各文件间调用的逻辑结构
 
 ```
 main.html
