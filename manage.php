@@ -18,12 +18,13 @@
                 background-color: #fefefe;
                 margin: 15% auto;
                 padding: 20px;
-                width: 300px;
+                width: 1500px;
                 text-align: center;
             }
             .input-class {
                 margin-bottom: 10px;
-                width: 100%;
+                width: 120px;
+                height: 40px;
                 padding: 5px;
                 box-sizing: border-box;
             }
@@ -42,10 +43,40 @@
             <div class="dialog-content">
                 <h2>添加航班信息</h2>
                 <form action="insert.php" method="post">
-                    <input type="text" class="input-class" name="flightnum" placeholder="航班号">
-                    <input type="text" class="input-class" name="date" placeholder="日期(xxxx-xx-xx)">
-                    <input type="submit" value="确定">
-                    <input type="reset" value="取消" onclick="Clear('InsertDialog')"/>
+                    <table align="center">
+                        <tr>
+                            <th>航班号</th>
+                            <th>起点</th>
+                            <th>终点</th>
+                            <th>日期</th>
+                            <th>起飞时刻</th>
+                            <th>到达时刻</th>
+                            <th>票价</th>
+                            <th>折扣票数</th>
+                            <th>折扣率</th>
+                            <th>航空公司</th>
+                            <th>剩余座位数</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="input-class" name="iflightnum" placeholder="航班号"></td>
+                            <td><input type="text" class="input-class" name="iorigin" placeholder="起点"></td>
+                            <td><input type="text" class="input-class" name="idestination" placeholder="终点"></td>
+                            <td><input type="text" class="input-class" name="idate" placeholder="日期(xxxx-xx-xx)"></td>
+                            <td><input type="text" class="input-class" name="ideparturetime" placeholder="起飞时刻(xx-xx)"></td>
+                            <td><input type="text" class="input-class" name="iarrivaltime" placeholder="到达时刻(xx-xx)"></td>
+                            <td><input type="text" class="input-class" name="iticketprice" placeholder="票价"></td>
+                            <td><input type="text" class="input-class" name="idiscountticket" placeholder="折扣票数"></td>
+                            <td><input type="text" class="input-class" name="idiscountrate" placeholder="折扣率"></td>
+                            <td><input type="text" class="input-class" name="iairline" placeholder="航空公司"></td>
+                            <td><input type="text" class="input-class" name="iavailableseats" placeholder="剩余座位数"></td>
+                        </tr>
+                    </table>
+                    <table align="center">
+                        <tr>
+                            <td><input type="submit" value="插入" style="height:30px; width: 50px"></td>
+                            <td><input type="reset" value="取消" style="margin-left: 30px; height:30px; width: 50px" onclick="Clear('InsertDialog')"/></td>
+                        </tr>
+                    </table>
                 </form>
             </div>
         </div>
@@ -54,10 +85,22 @@
             <div class="dialog-content">
                 <h2>删除航班信息</h2>
                 <form action="delete.php" method="post">
-                    <input type="text" class="input-class" name="flightnum" placeholder="航班号">
-                    <input type="text" class="input-class" name="date" placeholder="日期(xxxx-xx-xx)">
-                    <input type="submit" value="确定">
-                    <input type="reset" value="取消" onclick="Clear('DeleteDialog')"/>
+                <table align="center">
+                        <tr>
+                            <th>航班号</th>
+                            <th>日期</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="input-class" name="dflightnum" placeholder="航班号"></td>
+                            <td><input type="text" class="input-class" name="ddate" placeholder="日期(xxxx-xx-xx)"></td>
+                        </tr>
+                    </table>
+                    <table align="center">
+                        <tr>
+                            <td><input type="submit" value="删除" style="height:30px; width: 50px"></td>
+                            <td><input type="reset" value="取消" style="margin-left: 30px; height:30px; width: 50px" onclick="Clear('DeleteDialog')"/></td>
+                        </tr>
+                    </table>
                 </form>
             </div>
         </div>
@@ -66,15 +109,66 @@
             <div class="dialog-content">
                 <h2>更新航班信息</h2>
                 <form action="update.php" method="post">
-                    <input type="text" class="input-class" name="flightnum" placeholder="航班号">
-                    <input type="text" class="input-class" name="date" placeholder="日期(xxxx-xx-xx)">
-                    <input type="submit" value="确定">
-                    <input type="reset" value="取消" onclick="Clear('UpdateDialog')"/>
+                    <table align="center">
+                        <tr>
+                            <th>航班号</th>
+                            <th>日期</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="input-class" name="uflightnum_old" placeholder="航班号"></td>
+                            <td><input type="text" class="input-class" name="udate_old" placeholder="日期(xxxx-xx-xx)"></td>
+                        </tr>
+                    </table>
+                    <table align="center" style="margin-top: 30px; margin-bottom: 10px">
+                        <tr><th style="font-size:20px">更新为</th></tr>
+                    </table>
+                    <table align="center">
+                        <tr>
+                            <th>航班号</th>
+                            <th>起点</th>
+                            <th>终点</th>
+                            <th>日期</th>
+                            <th>起飞时刻</th>
+                            <th>到达时刻</th>
+                            <th>票价</th>
+                            <th>折扣票数</th>
+                            <th>折扣率</th>
+                            <th>航空公司</th>
+                            <th>剩余座位数</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="input-class" name="uflightnum" placeholder="航班号"></td>
+                            <td><input type="text" class="input-class" name="uorigin" placeholder="起点"></td>
+                            <td><input type="text" class="input-class" name="udestination" placeholder="终点"></td>
+                            <td><input type="text" class="input-class" name="udate" placeholder="日期(xxxx-xx-xx)"></td>
+                            <td><input type="text" class="input-class" name="udeparturetime" placeholder="起飞时刻(xx-xx)"></td>
+                            <td><input type="text" class="input-class" name="uarrivaltime" placeholder="到达时刻(xx-xx)"></td>
+                            <td><input type="text" class="input-class" name="uticketprice" placeholder="票价"></td>
+                            <td><input type="text" class="input-class" name="udiscountticket" placeholder="折扣票数"></td>
+                            <td><input type="text" class="input-class" name="udiscountrate" placeholder="折扣率"></td>
+                            <td><input type="text" class="input-class" name="uairline" placeholder="航空公司"></td>
+                            <td><input type="text" class="input-class" name="uavailableseats" placeholder="剩余座位数"></td>
+                        </tr>
+                    </table>
+                    <table align="center">
+                        <tr>
+                            <td><input type="submit" value="更新" style="height:30px; width: 50px"></td>
+                            <td><input type="reset" value="取消" style="margin-left: 30px; height:30px; width: 50px" onclick="Clear('UpdateDialog')"/></td>
+                        </tr>
+                    </table>
                 </form>
             </div>
         </div>
 
         <script>
+            window.addEventListener('pageshow', function(event) {
+                if (event.persisted || (window.performance && window.performance.navigation.type === 2)) {
+                    location.reload();
+                }
+            });
+            function showInfo() {
+
+            }
             // 显示对话框
             function showDialog(Dialog) {
                 var Dialog = document.getElementById(Dialog);

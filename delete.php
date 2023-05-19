@@ -1,25 +1,27 @@
 <html>
     <head>
-        <title> 发生错误！ </title>
+        <title> 提示！ </title>
         <meta charset="utf-8"/>
     </head>
     <body>
         <?php
-            $flightnum = ($_POST["flightnum"] == "" ? "" : $_POST["flightnum"]);
-            $date = ($_POST["date"] == "" ? "" : $_POST["date"]);
+            $flightnum = ($_POST["dflightnum"] == "" ? "" : $_POST["dflightnum"]);
+            $date = ($_POST["ddate"] == "" ? "" : $_POST["ddate"]);
             if ($flightnum == "" || $date == "") {
-                echo '<script>alert("输入内容为空");window.history.back();</script>';
+                echo '<script>alert("输入内容为空！");window.history.back();</script>';
             } else {
                 $db = mysqli_connect('localhost','root','','dbexp'); 
-                if (!$db) { 
-                    die('无法连接至数据库: ' . mysql_error($db)); 
+                if (!$db) {
+                    echo '<script>alert("无法连接至数据库！");window.history.back();</script>';
                 } 
-                $sql = "SELECT * FROM Users WHERE Username = '$name' AND password = '$passwd';";
+                $sql = "SELECT * FROM Flights WHERE FlightNumber = '$flightnum' AND Date = '$date';";
                 $res = mysqli_query($db, $sql);
                 if ($res->num_rows > 0) {
-                    header("Location: manage.php");
+                    $sql = "DELETE FROM Flights WHERE FlightNumber = '$flightnum' AND Date = '$date';";
+                    mysqli_query($db, $sql);
+                    echo '<script>alert("删除成功！");window.history.back();</script>';
                 } else {
-                    echo '<p align="center" style="font-size:40px; margin-top: 300px">用户名或密码错误！</p>';
+                    echo '<script>alert("所要删除数据不存在！");window.history.back();</script>';
                 }
                 mysqli_close($db);
             }

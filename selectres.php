@@ -6,20 +6,21 @@
     <body>
         <h1 align="center" style="margin-top: 100px">查询结果</h1>
         <?php
-            $db = mysqli_connect('localhost','root','','dbexp'); 
-            if (!$db) { 
-                die('无法连接至数据库: ' . mysql_error($db)); 
-            }
             $num = ($_POST["num"] == "" ? "" : $_POST["num"]);
             $year = ($_POST["year"] == "" ? "" : $_POST["year"]);
             $month = ($_POST["month"] == "" ? "" : $_POST["month"]);
             if ($num=="" || $year=="" || $month=="") {
-                echo '<p align="center" style="font-size:25px; margin-top: 50px">请输入完整的查询内容！</p>';
+                echo '<script>alert("请输入完整的查询内容！");window.history.back();</script>';
             } else {
                 if ($month < 10) $month="0".$month;
                 $day = ($_POST["day"] == "" ? "" : $_POST["day"]);
                 if ($day < 10) $day="0".$day;
                 $date = $year."-".$month."-".$day;
+
+                $db = mysqli_connect('localhost','root','','dbexp'); 
+                if (!$db) { 
+                    echo '<script>alert("无法连接至数据库！");window.history.back();</script>';
+                }
                 $sql = "SELECT * FROM Flights WHERE FlightNumber='$num' AND Date='$date';";
                 $res = mysqli_query($db, $sql);
                 if ($res->num_rows > 0) {
@@ -55,15 +56,15 @@
                             </tr>';
                     }
                     echo "</table>";
-                } else {
-                    echo '<h3 align="center" style="margin-top: 70px">未查询到结果</h3><br/>';
-                }
-            }
-            print '<table align="center">
+                    print '<table align="center">
                     <tr><td><button style="font-size: 20px; height:50px; width:130px; margin-top: 60px; "
                         onclick="location.href=\'http://localhost/dbexp/select.php\'">返回</button></tr></td>
                     </table>';
-            mysqli_close($db);
+                } else {
+                    echo '<script>alert("未查询到结果！");window.history.back();</script>';
+                }
+                mysqli_close($db);
+            }
         ?>
     </body>
 </html>

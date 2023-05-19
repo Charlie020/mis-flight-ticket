@@ -8,7 +8,7 @@
         <?php
             $db = mysqli_connect('localhost','root','','dbexp'); 
             if (!$db) { 
-                die('无法连接至数据库: ' . mysql_error($db)); 
+                echo '<script>alert("无法连接至数据库！");window.history.back();</script>';
             } 
             $sql = "SELECT * FROM Flights;";
             $res = mysqli_query($db, $sql);
