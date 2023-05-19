@@ -62,8 +62,8 @@
                             <td><input type="text" class="input-class" name="iorigin" placeholder="起点"></td>
                             <td><input type="text" class="input-class" name="idestination" placeholder="终点"></td>
                             <td><input type="text" class="input-class" name="idate" placeholder="日期(xxxx-xx-xx)"></td>
-                            <td><input type="text" class="input-class" name="ideparturetime" placeholder="起飞时刻(xx-xx)"></td>
-                            <td><input type="text" class="input-class" name="iarrivaltime" placeholder="到达时刻(xx-xx)"></td>
+                            <td><input type="text" class="input-class" name="ideparturetime" placeholder="起飞时刻(xx:xx)"></td>
+                            <td><input type="text" class="input-class" name="iarrivaltime" placeholder="到达时刻(xx:xx)"></td>
                             <td><input type="text" class="input-class" name="iticketprice" placeholder="票价"></td>
                             <td><input type="text" class="input-class" name="idiscountticket" placeholder="折扣票数"></td>
                             <td><input type="text" class="input-class" name="idiscountrate" placeholder="折扣率"></td>
@@ -141,8 +141,8 @@
                             <td><input type="text" class="input-class" name="uorigin" placeholder="起点"></td>
                             <td><input type="text" class="input-class" name="udestination" placeholder="终点"></td>
                             <td><input type="text" class="input-class" name="udate" placeholder="日期(xxxx-xx-xx)"></td>
-                            <td><input type="text" class="input-class" name="udeparturetime" placeholder="起飞时刻(xx-xx)"></td>
-                            <td><input type="text" class="input-class" name="uarrivaltime" placeholder="到达时刻(xx-xx)"></td>
+                            <td><input type="text" class="input-class" name="udeparturetime" placeholder="起飞时刻(xx:xx)"></td>
+                            <td><input type="text" class="input-class" name="uarrivaltime" placeholder="到达时刻(xx:xx)"></td>
                             <td><input type="text" class="input-class" name="uticketprice" placeholder="票价"></td>
                             <td><input type="text" class="input-class" name="udiscountticket" placeholder="折扣票数"></td>
                             <td><input type="text" class="input-class" name="udiscountrate" placeholder="折扣率"></td>

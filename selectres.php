@@ -58,7 +58,7 @@
                     echo "</table>";
                     print '<table align="center">
                     <tr><td><button style="font-size: 20px; height:50px; width:130px; margin-top: 60px; "
-                        onclick="location.href=\'http://localhost/dbexp/select.php\'">返回</button></tr></td>
+                        onclick="window.history.back();">返回</button></tr></td>
                     </table>';
                 } else {
                     echo '<script>alert("未查询到结果！");window.history.back();</script>';
