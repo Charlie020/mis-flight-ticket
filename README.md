@@ -73,34 +73,34 @@ WAMP Servers、Visual Studio Code
 
 #### 主界面
 
-![image-20230519155348378](C:\Users\25803\AppData\Roaming\Typora\typora-user-images\image-20230519155348378.png)
+![image-20230519155348378](C:\Users\25803\Desktop\主界面.png)
 
 #### 用户登录
 
-![image-20230519155449695](C:\Users\25803\AppData\Roaming\Typora\typora-user-images\image-20230519155449695.png)
+![image-20230519155449695](C:\Users\25803\Desktop\用户登录.png)
 
 
 
 #### 票务管理
 
-![image-20230519155512047](C:\Users\25803\AppData\Roaming\Typora\typora-user-images\image-20230519155512047.png)
+![image-20230519155512047](C:\Users\25803\Desktop\票务管理.png)
 
 #### 插入数据
 
-![image-20230519155534162](C:\Users\25803\AppData\Roaming\Typora\typora-user-images\image-20230519155534162.png)
+![image-20230519155534162](C:\Users\25803\Desktop\插入数据.png)
 
 #### 删除数据
 
-![image-20230519155609426](C:\Users\25803\AppData\Roaming\Typora\typora-user-images\image-20230519155609426.png)
+![image-20230519155609426](C:\Users\25803\Desktop\删除数据.png)
 
 #### 更新数据
 
-![image-20230519155615166](C:\Users\25803\AppData\Roaming\Typora\typora-user-images\image-20230519155615166.png)
+![image-20230519155615166](C:\Users\25803\Desktop\更新.png)
 
 #### 票务查询
 
-![image-20230519155434093](C:\Users\25803\AppData\Roaming\Typora\typora-user-images\image-20230519155434093.png)
+![image-20230519155434093](C:\Users\25803\Desktop\票务查询.png)
 
 #### 查询结果
 
-![image-20230519155635962](C:\Users\25803\AppData\Roaming\Typora\typora-user-images\image-20230519155635962.png)
+![image-20230519155635962](C:\Users\25803\Desktop\查询结果.png)
