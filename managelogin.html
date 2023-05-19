@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title> 管理员登录 </title>
+        <meta charset="utf-8"/>
+    </head>
+    <body>
+        <h1 align="center" style="margin-top: 150px">请 输 入 用 户 信 息</h1>
+        <form action="managelogin.php" method="post">
+            <table align="center" style="border-spacing: 30px;">
+                <tr>
+                    <td align="center" >
+                        <b> 用户名 </b>
+                    </td>
+                    <td>
+                        <input type="text" name="name" style="height:30px; width:300px"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <b> 密码 </b>
+                    </td>
+                    <td>
+                        <input type="text" name="passwd" style="height:30px; width:300px"/>
+                    </td>
+                </tr>
+            </table>
+            <table align="center" style="margin-top: 30px">
+                <tr>
+                    <td>
+                        <input type="submit" value="确定" style="height: 35px; width: 60px"/>
+                        <input type="reset" value="取消" style="height: 35px; width: 60px" onclick='location.href="http://localhost/dbexp/main.html"'/></td>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
